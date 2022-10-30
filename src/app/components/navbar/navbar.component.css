@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;400&display=swap');
+
+.hero_redes{
+    list-style-type:none;
+    margin: 0;
+    padding: 0;
+    overflow:hidden;
+    background-color: blue;
+}
+li{
+    float:right;
+    margin-top: 20px;
+    margin-right: 5px;
+}
+
+li a:hover{
+    background-color:royalblue;
+}
+
+.hero_boton{
+    background-color:blue;
+    color:white;
+    border: 2px solid white;
+    border-radius: 12px;
+    padding: 8px 15px;
+    font-size: 13px;
+    
+}
+
+.hero_boton:hover{
+    background-color: royalblue;
+}

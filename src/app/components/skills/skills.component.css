@@ -1,0 +1,15 @@
+.card{
+    margin: 10px;
+}
+.iconos{
+    float:right;
+    margin-right: 5px;
+}
+.text_center{
+    text-align: center;
+}
+.progress{
+    max-width: 65%;
+    margin-bottom: 70px;
+    margin: 20px auto;
+}

@@ -1,0 +1,20 @@
+.card{
+    margin: 10px;
+}
+.iconos{
+    float:right;
+    margin-right: 5px;
+}
+.imagen_fondo{
+    background: black;
+    float: left;
+    margin-right: 15px;
+    max-width: 10%;
+}
+.text_gray{
+    color:grey
+}
+.izquierda {
+    float: left;
+    margin-right: 15px;
+}
