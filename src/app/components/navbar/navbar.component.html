@@ -8,8 +8,11 @@
             <a href=""><img src="assets/bxl-instagram.svg" alt="Instagram"></a>
         </li>
         <li>
-            <button type="button" class="hero_boton">
+            <button *ngIf="!isLogged" routerLink="/login" type="button" class="hero_boton">
                 Login
+            </button>
+            <button *ngIf="isLogged" (click)="onLogOut()" type="button" class="hero_boton">
+                Cerrar Sesión
             </button>
         </li>
     </ul>

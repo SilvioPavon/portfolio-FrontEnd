@@ -1,59 +1,22 @@
 <div class="card">
     <div class="card-body">
         <h2 class="card-title">Hard Skills & Soft Skills
-            <a class="iconos" href=""><img src="assets/bx-plus.svg" alt="Mas"></a>
+            <a class="iconos" routerLink="/newskill" *ngIf="isLogged"><img src="assets/bx-plus.svg" alt="Mas"></a>
         </h2>
-        <p class="text_center">Java
-            <a class="iconos" href=""><img src="assets/bxs-trash-alt.svg" alt="Eliminar"></a>
-            <a class="iconos" href=""><img src="assets/bxs-edit-alt.svg" alt="Editar"></a>
-        </p>
-        <div class="progress">
-            <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 90%"
-                aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-        </div>
-        <p class="text_center">Spring Boot
-            <a class="iconos" href=""><img src="assets/bxs-trash-alt.svg" alt="Eliminar"></a>
-            <a class="iconos" href=""><img src="assets/bxs-edit-alt.svg" alt="Editar"></a>
-        </p>
-        <div class="progress">
-            <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 60%"
-                aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-        </div>
 
-        <p class="text_center">MySQL
-            <a class="iconos" href=""><img src="assets/bxs-trash-alt.svg" alt="Eliminar"></a>
-            <a class="iconos" href=""><img src="assets/bxs-edit-alt.svg" alt="Editar"></a>
-        </p>
-        <div class="progress">
-            <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 60%"
-                aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-        </div>
-
-        <p class="text_center">Angular
-            <a class="iconos" href=""><img src="assets/bxs-trash-alt.svg" alt="Eliminar"></a>
-            <a class="iconos" href=""><img src="assets/bxs-edit-alt.svg" alt="Editar"></a>
-        </p>
-        <div class="progress">
-            <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 100%"
-                aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-        </div>
-
-        <p class="text_center">Github
-            <a class="iconos" href=""><img src="assets/bxs-trash-alt.svg" alt="Eliminar"></a>
-            <a class="iconos" href=""><img src="assets/bxs-edit-alt.svg" alt="Editar"></a>
-        </p>
-        <div class="progress">
-            <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 80%"
-                aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-        </div>
-
-        <p class="text_center">Trabajo en equipo
-            <a class="iconos" href=""><img src="assets/bxs-trash-alt.svg" alt="Eliminar"></a>
-            <a class="iconos" href=""><img src="assets/bxs-edit-alt.svg" alt="Editar"></a>
-        </p>
-        <div class="progress">
-            <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 100%"
-                aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+        <div *ngFor="let skill of skill">
+            <p class="text_center" >{{skill.nombre}}
+                <button *ngIf="isLogged" class="iconos" (click)="delete(skill.id)" >
+                    <img src="assets/bxs-trash-alt.svg" alt="Eliminar">
+                </button>
+                <button *ngIf="isLogged" class="iconos" routerLink="/editskill/{{skill.id}}" >
+                    <img src="assets/bxs-edit-alt.svg" alt="Editar">
+                </button>
+            </p>
+            <div class="progress">
+                <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 90%"
+                    aria-valuenow="skill.porcentaje" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
         </div>
     </div>
 </div>
